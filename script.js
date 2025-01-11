@@ -50,3 +50,6 @@ searchbtn.addEventListener("click", (event) => {
 
   checkWeather(inputValue);
 });
+
+
+function onsubmitForm(e){ e.preventDefault()}
