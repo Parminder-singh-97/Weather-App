@@ -6,13 +6,11 @@ const searchbtn = document.querySelector(".search button");
 let cityName = [];
 
 async function checkWeather(city) {
-  await fetch(apiUrl + "&appid=" + apiKey + "&q=" + city)
-    .then((response) => {
+  await fetch(apiUrl + "&appid=" + apiKey + "&q=" + city).then((response) => {
       let weather = response.json();
 
       return weather;
-    })
-    .then((data) => {
+    }).then((data) => {
       // if (true === data) {
 
       let weatherData = data;
@@ -39,7 +37,8 @@ async function checkWeather(city) {
       document.querySelector(".city").innerHTML = city;
       document.querySelector(".humidity").innerHTML = weatherData.main.humidity;
       document.querySelector(".wind").innerHTML = wind + " km/h";
-       let searchweather = [
+
+        let searchweather = [
     {
       temperature: temperature,
       city:city,
@@ -50,8 +49,8 @@ async function checkWeather(city) {
   ]
 
    localStorage.setItem('weather',  JSON.stringify(searchweather));
-    })
-    .catch((err) => {
+   
+    }).catch((err) => {
       console.log(err);
     });
 }
