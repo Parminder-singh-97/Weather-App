@@ -40,6 +40,17 @@ async function checkWeather(city) {
       document.querySelector(".humidity").innerHTML = weatherData.main.humidity;
       document.querySelector(".wind").innerHTML = wind + " km/h";
     })
+  let searchweather = [
+    {
+      temperature: temperature,
+      city:city,
+      weatherData:weatherData.main.humidity,
+      wind: wind + " km/h"
+      
+    }
+  ]
+
+   localStorage.setItem('weather', searchweather);
     .catch((err) => {
       console.log(err);
     });
