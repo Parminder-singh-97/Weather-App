@@ -50,7 +50,7 @@ async function checkWeather(city) {
     }
   ]
 
-   localStorage.setItem('weather', searchweather);
+   localStorage.setItem('weather',  JSON.stringify(searchweather));
     .catch((err) => {
       console.log(err);
     });
