@@ -45,7 +45,7 @@ async function checkWeather(city) {
       temperature: temperature,
       city:city,
       weatherData:weatherData.main.humidity,
-      wind: wind + " km/h"
+      wind: wind + " km/h",
       
     }
   ]
